@@ -15,9 +15,49 @@
 					\begin{center}
 						Ampere's Law
 					\end{center}
-					$$\oint\vec{B}dl = \mu_0I$$
+					$$\oint\vec{B}dl = \mu_0I_{\text{Enclosed}}$$
+
+					When $x<a$, the magnetic field is the same at each point.\\
+					$I_{\text{Enclosed}} = 0$
+					\begin{align*}
+						\vec{B}\oint dl &= \mu_0I_{\text{Enclosed}}\\
+						\vec{B}\cdot2\pi x &= \mu_0 \cdot 0\\
+						\vec{B} &= 0\text{ T}
+					\end{align*}
+
+					When $a<x<b$,
+					$A = \pi b^2 - \pi a^2 = \pi( b^2 - a^2 )$\\
+					Total current passing through A is $I$\\
+					Current per unit area $\frac{I}{A} = \frac{I}{\pi( b^2 - a^2 )}$\\
+					$I_{\text{Enclosed}} = \frac{I}{\pi( b^2 - a^2 )} \pi( x^2 - a^2 ) = \frac{I( x^2 - a^2 )}{ b^2 - a^2 }$
+					\begin{align*}
+						\vec{B}\oint dl &= \mu_0I_{\text{Enclosed}}\\
+						\vec{B}\cdot2\pi x &= \mu_0 \frac{I( x^2 - a^2 )}{ b^2 - a^2 }\\
+						\vec{B} &= \frac{\mu_0 I}{2\pi x}\frac{x^2 - a^2}{ b^2 - a^2 }\text{ T}
+					\end{align*}
+
+					When $x>b$,\\
+					$I_{\text{Enclosed}} = I$
+					\begin{align*}
+						\vec{B}\oint dl &= \mu_0I_{\text{Enclosed}}\\
+						\vec{B}\cdot2\pi x &= \mu_0 \cdot I\\
+						\vec{B} &= \frac{\mu_0 I}{2\pi x}\text{ T}
+					\end{align*}
+\pagebreak
 				\item
-					Find the force that this wire would exert on a thin, straight length of wire $W$ located a distance $2b$ from the axis of the cylinder if that thin wire had a current $3i$ flowing from left to right.\\
+					Find the force that this wire would exert on a thin, straight length of wire $W$ located a distance $2b$ from the axis of the cylinder if that thin wire had a current $3I$ flowing from left to right.\\
+					$$F = IL\times \vec{B}\text{ where }I\text{ is current, }L\text{ is Length, and }\vec{B}\text{ is Magnetic Field}$$
+					For $x = 2b$,
+					\begin{align*}
+						\vec{B} &= \frac{\mu_0 I}{2\pi x}\\
+							     &= \frac{\mu_0I}{4\pi b}
+					\end{align*}
+					For $3I$ and $W$,
+					\begin{align*}
+						F &= IL\times \vec{B}\\
+						   &= 3IW \frac{\mu_0I}{4\pi b}\\
+						   &= \frac{u_0}{4\pi}\frac{3I^2W}{b}
+					\end{align*}
 			\end{enumerate}
 	\end{enumerate}
 \end{document}
