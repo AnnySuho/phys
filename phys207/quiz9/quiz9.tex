@@ -1,0 +1,26 @@
+\documentclass[fleqn]{article}
+\usepackage{amsmath,amssymb,amsthm,latexsym,xcolor,graphicx}
+\usepackage[shortlabels]{enumitem}
+\usepackage{multicol}
+\usepackage{relsize}
+
+\begin{document}
+	\begin{enumerate}
+		\setcounter{enumi}{2}
+		\item 
+			An infinitely long wire carries a current $i_0\sin{\omega t}$ as shown, where $i_0$ and $\omega$ are known. Nearby is a rectangular loop of wire with resistivity $\rho$ which has cross sectional area $A$ and dimensions $W$ and $H$ as shown. Ignoring self inductance find the current that will flow in the loop.
+			\begin{align*}
+				\oint\vec{B}dl &= \mu_0I\\
+								  &= \mu_0I_0\sin{\omega t}\\
+								  &= B(2\pi y)
+			\end{align*}
+			$$B(y) = \frac{\mu_0i_0\sin{\omega t}}{2\pi y}$$
+			\begin{align*}
+				-\frac{d}{dt}(\phi) &= -\frac{d}{dt}(\oint\vec{B}dl)\\
+									   &= \frac{d}{dt}\frac{\mu_0i_0\omega\sin{\omega t}}{2\pi}\int_{D}^{D+H}\frac{1}{y}dy\\
+									   &= \frac{\mu_0i_0\omega\cos{\omega t}}{2\pi}\ln{\frac{D+H}{D}}
+			\end{align*}
+			$$I = \frac{\mu_0i_0\omega W\cos{\omega t}}{2\pi R}\ln{\frac{D+H}{D}} \text{ where } R = \frac{2\rho(W+H)}{A}$$
+			$$I = \frac{\mu_0i_0\omega W\cos{\omega t}\ln{\frac{D+H}{D}}}{4\pi\rho\frac{(W+H)}{A}}  \text{ where } A \text{ is the cross sectional area.}$$
+	\end{enumerate}
+\end{document}
